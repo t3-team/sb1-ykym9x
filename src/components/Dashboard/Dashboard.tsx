@@ -34,7 +34,11 @@ function ChatBotDashBoard() {
   }, [messages]);
 
   const fetchChatResponse = async (query: string, uid: string) => {
-    const url = "http://econ-demo.turiyatree.in:5000/chat";
+    const url = import.meta.env.VITE_API_URL; // Access environment variable
+    console.log("API URL:", import.meta.env.VITE_API_URL);
+    if (!url) {
+      throw new Error("API URL is not defined. Check your .env file.");
+    }
     const headers = {
       "Content-Type": "application/json",
     };
