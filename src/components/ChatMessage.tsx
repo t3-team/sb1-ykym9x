@@ -14,7 +14,7 @@ interface Message {
 
 interface ChatMessageProps {
   message: Message;
-  onFeedback?: (messageId: string, isPositive: boolean) => void;
+  // onFeedback?: (messageId: string, isPositive: boolean) => void;
 }
 
 const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
@@ -87,9 +87,9 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
             </div>
           )}
         </div>
-        {!isUser && onFeedback && (
+        {/* {!isUser && onFeedback && (
             <FeedbackButtons messageId={message.id} onFeedback={onFeedback} />
-          )}
+          )} */}
         </div>
       </div>
     </div>

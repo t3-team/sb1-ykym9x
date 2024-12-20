@@ -104,32 +104,7 @@ function ChatBotDashBoard() {
     }
   };
 
-  // Handle Feedback:
-  const handleFeedback = async (messageId: string, isPositive: boolean) => {
-    try {
-      // You can implement your feedback API endpoint here
-      const response = await fetch('http://econ-demo.turiyatree.in:5000/feedback', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          messageId,
-          userId,
-          isPositive,
-          timestamp: new Date().toISOString(),
-        }),
-      });
-  
-      if (!response.ok) {
-        throw new Error('Failed to submit feedback');
-      }
-  
-      console.log('Feedback submitted successfully');
-    } catch (error) {
-      console.error('Error submitting feedback:', error);
-    }
-  };
+
 
   return (
     <div className="flex flex-col h-screen bg-gradient-to-b from-blue-300 to-white">
@@ -159,7 +134,6 @@ function ChatBotDashBoard() {
               <ChatMessage
               key={message.id} 
               message={message}
-              onFeedback={message.type === 'bot' ? handleFeedback : undefined}
               />
             ))}
             {isProcessing && (
