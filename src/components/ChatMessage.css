@@ -1,0 +1,37 @@
+ol {
+    list-style-type: decimal; /* Ensures numbered lists display correctly */
+    padding-left: 1.25rem; /* Adjust left padding */
+    margin-bottom: 1rem; /* Space below the list */
+  }
+  
+  ul {
+    list-style-type: disc; /* Ensures bullet points for unordered lists */
+    padding-left: 1.25rem; /* Adjust left padding */
+    margin-bottom: 1rem; /* Space below the list */
+  }
+  
+  li {
+    margin-bottom: 0.5rem; /* Space between list items */
+    text-align: justify; /* Aligns text for better readability */
+  }
+  
+  li::marker {
+    font-size: 1rem; /* Adjust marker size */
+    color: inherit; /* Match marker color with the text */
+    margin-right: 0.5rem; /* Adds space between marker and list item text */
+  }
+  
+  p {
+    margin-bottom: 1rem; /* Space below paragraphs */
+    text-align: justify; /* Aligns text for a clean look */
+  }
+  
+  a {
+    color: #3b82f6; /* Link color (blue) */
+    text-decoration: underline; /* Underline for links */
+  }
+  
+  a:hover {
+    color: #2563eb; /* Darker blue on hover */
+  }
+  
